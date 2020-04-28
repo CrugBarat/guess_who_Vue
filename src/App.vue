@@ -1,16 +1,22 @@
 <template lang="html">
   <div>
     <h1>GUESS WHO?</h1>
+    <mystery-card :characters="characters"></mystery-card>
+    <img class="mystery-image" :src="questionMark">
   </div>
 </template>
 
 <script>
+import MysterCard from '@/components/MysteryCard.vue';
+import questionMark from '@/assets/avatars/question_mark.jpg'
+
 export default {
   name: 'app',
   data() {
     return {
       characters: [],
-      choices: []
+      choices: [],
+      questionMark: questionMark
     }
   },
   methods: {
@@ -34,9 +40,15 @@ export default {
   mounted() {
     this.getCharacters('characters');
     this.getChoices('choices');
+  },
+  components: {
+    'mystery-card': MysterCard
   }
 }
 </script>
 
 <style lang="css" scoped>
+.mystery-image {
+  width: 25%;
+}
 </style>
