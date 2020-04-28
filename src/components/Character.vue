@@ -1,15 +1,24 @@
 <template lang="html">
-  <p>{{character.name}}</p>
+  <p v-on:click="handleClick()">{{character.name}}</p>
 </template>
 
 <script>
 
+import {eventBus} from '../main.js';
 
 export default {
   name: 'character',
-  props: ['character']
+  props: ['character'],
+  methods: {
+    handleClick() {
+      eventBus.$emit('character-selected', this.character)
+    }
+  }
 }
 </script>
 
 <style lang="css" scoped>
+p:hover {
+  cursor: pointer;
+}
 </style>
