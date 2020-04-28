@@ -1,7 +1,15 @@
 <template lang="html">
   <div>
-    <mystery-card class="mystery" v-if="mysteryCard" :mysteryCard="mysteryCard" hidden></mystery-card>
-    <character v-for="character in editedCharacters" :character="character"></character>
+    <div class="container">
+      <mystery-card v-if="mysteryCard" :mysteryCard="mysteryCard" hidden></mystery-card>
+    </div>
+    <div class="grid-container">
+      <div class="grid">
+        <div class="characters">
+          <character v-for="character in editedCharacters" :character="character"></character>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -39,19 +47,33 @@ export default {
         alert (`YOU WON! You picked ${character.name}!`)
       } else {
         this.removeCharacter(character);
-        alert ('Please try again!')
       }
     },
     removeCharacter(selectedCharacter) {
       let characterIndex = this.editedCharacters.indexOf(selectedCharacter);
       this.editedCharacters.splice(characterIndex, 1);
     }
-    }
   }
+}
 </script>
 
 <style lang="css" scoped>
-.mystery {
-  border-style: solid;
+.grid-container {
+  display: block;
+  text-align: center;
 }
+
+.grid {
+  display: inline-block;
+  width: 40%;
+}
+
+.characters {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 1vw;
+}
+
 </style>

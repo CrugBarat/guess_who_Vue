@@ -1,7 +1,9 @@
 <template lang="html">
   <div>
     <h1>GUESS WHO?</h1>
-    <img class="mystery-image" :src="questionMark">
+    <div class="container">
+      <img class="mystery-image" :src="questionMark">
+    </div>
     <game-board v-if="characters.length" :characters="characters"></game-board>
   </div>
 </template>
@@ -48,7 +50,25 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.container {
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-left: 4vw;
+  margin-left: 4vw;
+  margin-top: 20px;
+}
+
 .mystery-image {
+  display: inline-block;
   width: 80px;
+  border-style: solid;
 }
 </style>

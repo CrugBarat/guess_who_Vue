@@ -1,5 +1,5 @@
 <template lang="html">
-  <p v-on:click="handleClick()">{{character.name}}</p>
+  <p class="character" v-on:click="handleClick()"><img src="">{{character.name}}</p>
 </template>
 
 <script>
@@ -20,5 +20,11 @@ export default {
 <style lang="css" scoped>
 p:hover {
   cursor: pointer;
+}
+
+.character {
+    border-style: solid;
+    width: 23%;
+    height: 75px;
 }
 </style>
