@@ -1,5 +1,5 @@
 <template lang="html">
-  <p class="character" v-on:click="handleClick()"><img src="">{{character.name}}</p>
+  <p class="character" v-on:click="handleClick()">{{character.name}}</p>
 </template>
 
 <script>
