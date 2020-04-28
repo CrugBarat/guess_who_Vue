@@ -3,11 +3,13 @@
     <h1>GUESS WHO?</h1>
     <mystery-card :characters="characters"></mystery-card>
     <img class="mystery-image" :src="questionMark">
+    <game-board :characters="characters"></game-board>
   </div>
 </template>
 
 <script>
 import MysterCard from '@/components/MysteryCard.vue';
+import GameBoard from '@/components/GameBoard.vue';
 import questionMark from '@/assets/avatars/question_mark.jpg'
 
 export default {
@@ -42,7 +44,8 @@ export default {
     this.getChoices('choices');
   },
   components: {
-    'mystery-card': MysterCard
+    'mystery-card': MysterCard,
+    'game-board': GameBoard
   }
 }
 </script>

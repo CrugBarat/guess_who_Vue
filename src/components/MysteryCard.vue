@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <p v-if="characters" v-for="character in chunkedCharacters(randomIndex())">{{character}}</p>
+    <p v-if="characters" v-for="character in chunkedCharacters(randomIndex())">{{character.name}}</p>
   </div>
 </template>
 
