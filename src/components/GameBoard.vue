@@ -1,13 +1,18 @@
 <template lang="html">
   <div>
-    <p v-for="character in characters">{{character.name}}</p>
+    <character v-for="character in characters" :character="character"></character>
   </div>
 </template>
 
 <script>
+import Character from '@/components/Character.vue';
+
 export default {
   name: 'game-board',
-  props: ['characters']
+  props: ['characters'],
+  components: {
+    'character': Character
+  }
 }
 </script>
 
