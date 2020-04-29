@@ -1,12 +1,14 @@
 <template lang="html">
-  <button>{{choice}}</button>
+  <div>
+    <button v-if="choice !== '_id'">{{choice}}?</button>
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'user-choice',
-    props: ['choice']
-  }
+export default {
+  name: 'user-choice',
+  props: ['choice']
+}
 </script>
 
 <style lang="css" scoped>

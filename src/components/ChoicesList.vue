@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <user-choice v-for="choice in choices" :choice="choice"></user-choice>
+    <user-choice v-for="choice in getChoice" :choice="choice"></user-choice>
   </div>
 </template>
 
@@ -13,6 +13,15 @@
     components: {
       'user-choice': Choice
     },
+    computed: {
+      getChoice() {
+        if (this.choices) {
+        for (let choice of this.choices) {
+          return Object.keys(choice);
+        }
+      }
+    }
+    }
   }
 </script>
 
