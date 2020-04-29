@@ -65,7 +65,7 @@ export default {
 
 .grid {
   display: inline-block;
-  width: 40%;
+  width: 90%;
 }
 
 .characters {
