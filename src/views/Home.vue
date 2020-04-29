@@ -11,7 +11,7 @@
         <img class="logo" :src="logo">
         </router-link>
       </div>
-      <game-board v-if="characters.length" :characters="characters"></game-board>
+      <game-board v-if="characters.length" :characters="characters" :choices="choices"></game-board>
     </div>
   </div>
 </template>

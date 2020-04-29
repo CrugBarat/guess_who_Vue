@@ -1,7 +1,10 @@
 <template lang="html">
   <div>
-    <div class="container">
+    <div>
       <mystery-card v-if="mysteryCard" :mysteryCard="mysteryCard" hidden></mystery-card>
+    </div>
+    <div class="choices-container">
+      <user-choices-list :choices="choices"></user-choices-list>
     </div>
     <div class="grid-container">
       <div class="grid">
@@ -16,11 +19,12 @@
 <script>
 import Character from './Character.vue';
 import MysteryCard from './MysteryCard.vue';
+import ChoicesList from './ChoicesList.vue';
 import {eventBus} from '../main.js';
 
 export default {
   name: 'game-board',
-  props: ['characters'],
+  props: ['characters', 'choices'],
   data() {
     return {
       selectedCharacter: null,
@@ -30,7 +34,8 @@ export default {
   },
   components: {
     'character': Character,
-    'mystery-card': MysteryCard
+    'mystery-card': MysteryCard,
+    'user-choices-list': ChoicesList
   },
   mounted () {
     eventBus.$on('character-selected', (character) => {
