@@ -1,8 +1,7 @@
 <template lang="html">
   <div>
-    <h1>GUESS WHO?</h1>
-    <div class="container">
-      <img class="mystery-image" :src="questionMark">
+    <div class="logo-container">
+      <img class="logo" src="./assets/logo.png">
     </div>
     <game-board v-if="characters.length" :characters="characters"></game-board>
   </div>
@@ -10,15 +9,13 @@
 
 <script>
 import GameBoard from '@/components/GameBoard.vue';
-import questionMark from '@/assets/avatars/question_mark.jpg';
 
 export default {
   name: 'app',
   data() {
     return {
       characters: [],
-      choices: [],
-      questionMark: questionMark,
+      choices: []
     }
   },
   mounted() {
@@ -41,24 +38,35 @@ export default {
 
 <style lang="css" scoped>
 
-h1 {
-  text-align: center;
-  font-size: 50px;
-}
+  .logo-container {
+    display: block;
+    text-align: center;
+  }
 
-.container {
-  display: block;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  margin-left: 4vw;
-  margin-left: 4vw;
-  margin-top: 20px;
-}
+  .logo {
+    display: inline-block;
+  }
 
-.mystery-image {
-  display: inline-block;
-  width: 80px;
-  border-style: solid;
-}
+  .container {
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-left: 4vw;
+    margin-left: 4vw;
+    margin-top: 20px;
+  }
+
+  .mystery-image {
+    display: inline-block;
+    width: 80px;
+    border-style: solid;
+  }
+</style>
+
+<style>
+  body {
+    cursor: url('./assets/cursor.png'), auto;
+  }
+
 </style>

@@ -1,5 +1,7 @@
 <template lang="html">
-  <p class="character" v-on:click="handleClick()"><img :src="getImage(character)"></p>
+  <div class="character" v-on:click="handleClick()">
+    <img :src="getImage(character)">
+  </div>
 </template>
 
 <script>
@@ -26,11 +28,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
-p:hover {
-  cursor: pointer;
-}
 
-img {
-  height: 250px;
-}
+  img {
+    height: 250px;
+  }
+
+  img:hover {
+    opacity: 70%;
+    padding-bottom: 10%;
+  }
 </style>
