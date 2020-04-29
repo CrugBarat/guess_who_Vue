@@ -22,7 +22,7 @@ import logo from '../assets/logo.png';
 import rules from '../assets/rules.png';
 
 export default {
-    name: 'app',
+    name: 'home',
     data() {
       return {
         characters: [],

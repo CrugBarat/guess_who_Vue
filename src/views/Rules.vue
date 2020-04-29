@@ -2,7 +2,7 @@
   <div>
     <div class="app-conatiner">
       <div class="logo-container">
-        <router-link :to="{name: 'home'}">
+        <router-link class="link" :to="{name: 'home'}">
         <img class="logo" :src="logo">
         </router-link>
       </div>
@@ -25,17 +25,21 @@ import logo from '../assets/logo.png';
 
 <style lang="css" scoped>
 
-.app-conatiner {
-  margin: 60px;
-  background-color: white;
-}
+    .app-conatiner {
+      margin: 60px;
+      background-color: white;
+    }
 
-.logo-container {
-  display: block;
-  text-align: center;
-}
+    .logo-container {
+      display: block;
+      text-align: center;
+    }
 
-.logo {
-  display: inline-block;
-}
+    .logo {
+      display: inline-block;
+    }
+
+    .link:hover {
+      cursor: url('../assets/cursor.png'), auto;
+    }
 </style>
