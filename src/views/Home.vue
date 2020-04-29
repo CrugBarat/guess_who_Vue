@@ -1,11 +1,11 @@
 <template lang="html">
   <div>
-    <div class="rules-container">
-      <router-link class="link" :to="{name: 'rules'}">
-        <img class="rules" :src="rules">
-      </router-link>
-    </div>
     <div class="app-conatiner">
+      <div class="rules-container">
+        <router-link class="link" :to="{name: 'rules'}">
+          <img class="rules" :src="rules">
+        </router-link>
+      </div>
       <div class="logo-container">
         <router-link class="link" :to="{name: 'home'}">
         <img class="logo" :src="logo">
@@ -53,10 +53,13 @@ export default {
 <style lang="css" scoped>
 
   .rules-container {
+    width: 80px;
+    float: left;
+    margin: 5px;
   }
 
   .rules {
-    width: 40px;
+    width: 80px;
   }
 
   .app-conatiner {
@@ -71,6 +74,11 @@ export default {
 
   .logo {
     display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    float: left;
+    margin-left: 20%;
+    width: 40vw;
   }
 
   .link:hover {
