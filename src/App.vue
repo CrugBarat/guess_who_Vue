@@ -1,9 +1,11 @@
 <template lang="html">
   <div>
-    <div class="logo-container">
-      <img class="logo" src="./assets/logo.png">
+    <div class="app-conatiner">
+      <div class="logo-container">
+        <img class="logo" src="./assets/logo.png">
+      </div>
+      <game-board v-if="characters.length" :characters="characters"></game-board>
     </div>
-    <game-board v-if="characters.length" :characters="characters"></game-board>
   </div>
 </template>
 
@@ -38,35 +40,44 @@ export default {
 
 <style lang="css" scoped>
 
-  .logo-container {
-    display: block;
-    text-align: center;
-  }
+    .app-conatiner {
+      margin: 60px;
+      background-color: white;
+    }
 
-  .logo {
-    display: inline-block;
-  }
+    .logo-container {
+      display: block;
+      text-align: center;
+    }
 
-  .container {
-    display: block;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    margin-left: 4vw;
-    margin-left: 4vw;
-    margin-top: 20px;
-  }
+    .logo {
+      display: inline-block;
+    }
 
-  .mystery-image {
-    display: inline-block;
-    width: 80px;
-    border-style: solid;
-  }
+    .container {
+      display: block;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      margin-left: 4vw;
+      margin-left: 4vw;
+      margin-top: 20px;
+    }
+
+    .mystery-image {
+      display: inline-block;
+      width: 80px;
+      border-style: solid;
+    }
+
 </style>
 
+
 <style>
+
   body {
     cursor: url('./assets/cursor.png'), auto;
+    background-color: #065094;
   }
 
 </style>
