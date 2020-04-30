@@ -70,6 +70,7 @@ export default {
   .logo-container {
     display: block;
     text-align: center;
+    overflow: auto;
   }
 
   .logo {

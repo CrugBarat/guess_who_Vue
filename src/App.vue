@@ -17,5 +17,6 @@
   body {
     cursor: url('./assets/cursor.png'), auto;
     background-color: #065094;
+    font-family: 'Concert One', cursive;
   }
 </style>

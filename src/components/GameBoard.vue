@@ -4,7 +4,9 @@
       <mystery-card v-if="mysteryCard" :mysteryCard="mysteryCard" hidden></mystery-card>
     </div>
     <div class="choices-container">
-      <user-choices-list :choices="choices"></user-choices-list>
+      <div class="choices">
+        <user-choices-list :choices="choices"></user-choices-list>
+      </div>
     </div>
     <div class="grid-container">
       <div class="grid">
@@ -79,6 +81,16 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   padding-left: 1vw;
+}
+
+.choices-container {
+  display: block;
+  text-align: center;
+}
+
+.choices {
+  width: 60%;
+  display: inline-block;
 }
 
 </style>

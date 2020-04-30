@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="buttons-container">
     <user-choice v-for="choice in getChoice" :choice="choice"></user-choice>
   </div>
 </template>
@@ -26,4 +26,13 @@
 </script>
 
 <style lang="css" scoped>
+.buttons-container {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 20vh;
+}
 </style>
