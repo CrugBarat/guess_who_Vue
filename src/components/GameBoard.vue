@@ -31,7 +31,8 @@ export default {
     return {
       selectedCharacter: null,
       mysteryCard: this.characters[this.randomIndex()],
-      editedCharacters: this.characters
+      editedCharacters: this.characters,
+      selectedChoice: null
     }
   },
   components: {
@@ -43,6 +44,10 @@ export default {
     eventBus.$on('character-selected', (character) => {
       this.selectedCharacter = character;
       this.isMysteryCard(character);
+    });
+
+    eventBus.$on('choice-selected', (choice) => {
+      this.selectedChoice = choice;
     });
   },
   methods: {
